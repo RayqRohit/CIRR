@@ -26,6 +26,17 @@ $(document).ready(function () {
             }
         }
 
+        // Special check for Outbound Slider: Display as grid if 3 or fewer cards
+        if (sliderType === 'outbound') {
+            var outboundSlideCount = $slider.children('.student-mobility-outbound-slide').length;
+            if (outboundSlideCount <= 3) {
+                $slider.addClass('row g-4').removeClass('student-mobility-outbound-slider');
+                $slider.find('.student-mobility-outbound-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 student-mobility-outbound-slide');
+                $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
+                return;
+            }
+        }
+
         function updateProgress(slick, currentSlide) {
             var progress = 0;
             
@@ -41,7 +52,7 @@ $(document).ready(function () {
                 return value;
             }
 
-            if (sliderType === 'inbound') {
+            if (sliderType === 'inbound' || sliderType === 'outbound') {
                 // Calculation for standard sliding (1 by 1)
                 var slidesToShow = getSetting('slidesToShow', 3);
                 var totalSteps = Math.max(slick.slideCount - slidesToShow + 1, 1);
@@ -120,6 +131,26 @@ $(document).ready(function () {
             ]
         },
         'students'
+    );
+    // ==========================================
+    // 3. Outbound Track Record Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.student-mobility-outbound-slider'),
+        $('.student-mobility-outbound-progress-bar'),
+        $('.student-mobility-outbound-prev'),
+        $('.student-mobility-outbound-next'),
+        {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        },
+        'outbound'
     );
 
 });

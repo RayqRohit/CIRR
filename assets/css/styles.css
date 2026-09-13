@@ -130,6 +130,90 @@ img {
     height: auto;
 }
 
+/* Outbound Track Record Section */
+.student-mobility-outbound-section {
+    background-color: #ffffff;
+}
+
+.student-mobility-outbound-title {
+    font-size: 32px;
+}
+
+.student-mobility-text-dark {
+    color: #1a1460;
+    font-family: var(--font-figtree-bold);
+    letter-spacing: -1px;
+}
+
+.student-mobility-text-gradient {
+    font-family: var(--font-figtree-bold);
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -1px;
+}
+
+.student-mobility-program-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0f0445; /* Very dark blue from reference */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Force bootstrap columns to flex so height:100% works perfectly in grid mode */
+.student-mobility-outbound-section .row > div {
+    display: flex;
+}
+
+/* Force Slick Slider to use flexbox so slides stretch to equal height */
+.student-mobility-outbound-slider .slick-track {
+    display: flex !important;
+}
+
+.student-mobility-outbound-slider .slick-slide {
+    height: inherit !important;
+    display: flex !important;
+}
+
+.student-mobility-outbound-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.student-mobility-program-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.student-mobility-program-body {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-mobility-program-title {
+    font-family: var(--font-figtree-bold, 'Figtree', sans-serif);
+    font-size: 18px;
+    color: #FFC900;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.student-mobility-program-desc {
+    font-family: var(--font-figtree-regular, 'Figtree', sans-serif);
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
 /* Inbound Student Mobility Section */
 .student-mobility-inbound-section {
     background-color: #f5f5f5;
@@ -374,6 +458,7 @@ img {
     background-clip: text;
     color: transparent;
     display: inline-block;
+    letter-spacing: -1px;
 }
 
 .student-mobility-profile-card {
