@@ -16,11 +16,13 @@ $(document).ready(function () {
         }
 
         // Special check for Students Grid Slider: Display as static grid if 8 or fewer cards
-        if (sliderType === 'students') {
-            var studentSlideCount = $slider.children('.student-mobility-students-slide').length;
+        if (sliderType === 'students' || sliderType === 'abroad') {
+            var slideClass = sliderType === 'students' ? '.student-mobility-students-slide' : '.student-mobility-abroad-slide';
+            var sliderClass = sliderType === 'students' ? 'student-mobility-students-slider' : 'student-mobility-abroad-slider';
+            var studentSlideCount = $slider.children(slideClass).length;
             if (studentSlideCount <= 8) {
-                $slider.addClass('row g-4').removeClass('student-mobility-students-slider');
-                $slider.find('.student-mobility-students-slide').addClass('col-lg-3 col-md-6 col-sm-6').removeClass('px-2 mb-4 student-mobility-students-slide');
+                $slider.addClass('row g-4').removeClass(sliderClass);
+                $slider.find(slideClass).addClass('col-lg-3 col-md-6 col-sm-6').removeClass('px-2 mb-4 ' + slideClass.substring(1));
                 $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
                 return;
             }
@@ -32,6 +34,17 @@ $(document).ready(function () {
             if (outboundSlideCount <= 3) {
                 $slider.addClass('row g-4').removeClass('student-mobility-outbound-slider');
                 $slider.find('.student-mobility-outbound-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 student-mobility-outbound-slide');
+                $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
+                return;
+            }
+        }
+
+        // Special check for Value Slider: Display as grid if 4 or fewer cards
+        if (sliderType === 'value') {
+            var valueSlideCount = $slider.children('.student-mobility-value-slide').length;
+            if (valueSlideCount <= 4) {
+                $slider.addClass('row g-4').removeClass('student-mobility-value-slider');
+                $slider.find('.student-mobility-value-slide').addClass('col-lg-3 col-md-6').removeClass('px-2 mb-4 student-mobility-value-slide');
                 $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
                 return;
             }
@@ -52,12 +65,12 @@ $(document).ready(function () {
                 return value;
             }
 
-            if (sliderType === 'inbound' || sliderType === 'outbound') {
+            if (sliderType === 'inbound' || sliderType === 'outbound' || sliderType === 'value') {
                 // Calculation for standard sliding (1 by 1)
-                var slidesToShow = getSetting('slidesToShow', 3);
+                var slidesToShow = getSetting('slidesToShow', sliderType === 'value' ? 4 : 3);
                 var totalSteps = Math.max(slick.slideCount - slidesToShow + 1, 1);
                 progress = ((currentSlide + 1) / totalSteps) * 100;
-            } else if (sliderType === 'students') {
+            } else if (sliderType === 'students' || sliderType === 'abroad') {
                 // Calculation for grid sliding (by pages/rows)
                 var slidesToScroll = getSetting('slidesToScroll', 4);
                 var currentStep = Math.ceil(currentSlide / slidesToScroll) + 1;
@@ -151,6 +164,56 @@ $(document).ready(function () {
             ]
         },
         'outbound'
+    );
+
+    // ==========================================
+    // 4. Abroad Students Grid Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.student-mobility-abroad-slider'),
+        $('.student-mobility-abroad-progress-bar'),
+        $('.student-mobility-abroad-prev'),
+        $('.student-mobility-abroad-next'),
+        {
+            rows: 2,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: { rows: 2, slidesToShow: 2, slidesToScroll: 2 }
+                },
+                {
+                    breakpoint: 768,
+                    settings: { rows: 1, slidesToShow: 1, slidesToScroll: 1 }
+                }
+            ]
+        },
+        'abroad'
+    );
+
+    // ==========================================
+    // 5. Value of Mobility Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.student-mobility-value-slider'),
+        $('.student-mobility-value-progress-bar'),
+        $('.student-mobility-value-prev'),
+        $('.student-mobility-value-next'),
+        {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                { breakpoint: 1200, settings: { slidesToShow: 3 } },
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        },
+        'value'
     );
 
 });

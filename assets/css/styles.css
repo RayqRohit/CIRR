@@ -130,6 +130,81 @@ img {
     height: auto;
 }
 
+/* Routes & Programme Types Section */
+.student-mobility-routes-section {
+    background-color: #ffffff;
+}
+
+.student-mobility-routes-title {
+    color: #000;
+    font-family: var(--font-figtree-bold);
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.student-mobility-routes-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    min-height: 400px;
+}
+
+.student-mobility-route-card {
+    background: #ffffff;
+    border: 2.3px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(#ffffff, #ffffff), var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    border-radius: 16px;
+    padding: 32px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.student-mobility-route-icon {
+    margin-bottom: 20px;
+}
+
+.student-mobility-route-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.student-mobility-route-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 32px;
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.student-mobility-route-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.3px;
+    background: linear-gradient(90deg, #91909b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.student-mobility-route-card-text {
+    font-family: var(--font-figtree-regular, 'Figtree', sans-serif);
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
 /* Outbound Track Record Section */
 .student-mobility-outbound-section {
     background-color: #ffffff;
@@ -153,6 +228,7 @@ img {
     background-clip: text;
     color: transparent;
     letter-spacing: -1px;
+    font-size: 32px;
 }
 
 .student-mobility-program-card {
@@ -405,7 +481,7 @@ img {
 
 .student-mobility-progress-container {
     height: 5px;
-    background-color: #1a1460;
+    background-color: #1d1459;
     border-radius: 2px;
     position: relative;
     overflow: hidden;
@@ -464,7 +540,8 @@ img {
 .student-mobility-profile-card {
     border-radius: 16px;
     overflow: hidden;
-    background-color: #1D1459;
+    background-color: #1a1460;
+    border: none;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -482,15 +559,148 @@ img {
 
 .student-mobility-profile-name {
     font-family: var(--font-figtree-bold);
-    font-size: 16px;
+    font-size: 18px;
     color: #ffffff;
     margin-bottom: 4px;
 }
 
 .student-mobility-profile-dept {
     font-family: var(--font-figtree-bold);
-    font-size: 12px;
+    font-size: 14px;
     color: #FFC900;
     margin-bottom: 0;
 }
+
+.student-mobility-abroad-section .student-mobility-profile-card {
+    background-color: #f0eefe;
+    border: 1px solid #5a6679;
+}
+
+.student-mobility-abroad-section .student-mobility-profile-name {
+    font-size: 16px;
+    color: #000000;
+}
+
+.student-mobility-abroad-section .student-mobility-profile-dept {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Value of Mobility Section */
+.student-mobility-value-section {
+    background-color: #f6f7f9;
+}
+
+.student-mobility-value-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 7px;
+}
+
+.student-mobility-value-title {
+   font-family: var(--font-polymath-bold);
+    font-size: 60px;
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    display: inline-block;
+    letter-spacing: 0;
+}
+
+.student-mobility-value-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #444;
+    max-width: 900px;
+}
+
+.student-mobility-value-card {
+    background: #ffffff;
+    border: 2px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(#ffffff, #ffffff), var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Force Slick Slider to use flexbox so slides stretch to equal height */
+.student-mobility-value-slider .slick-track {
+    display: flex !important;
+}
+
+.student-mobility-value-slider .slick-slide {
+    height: inherit !important;
+    display: flex !important;
+}
+
+.student-mobility-value-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.student-mobility-value-icon {
+    margin-bottom: 20px;
+}
+
+.student-mobility-value-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.student-mobility-value-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 26px;
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.student-mobility-value-card-text {
+    font-family: var(--font-figtree-regular, 'Figtree', sans-serif);
+    font-size: 16px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Global CTA Section */
+.student-mobility-global-cta-section {
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-top: 60px;
+}
+
+.student-mobility-global-cta-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #444;
+}
+
+.student-mobility-btn-gradient {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    border: none;
+    font-family: var(--font-figtree-bold);
+    font-size: 23px;
+    padding: 18px 60px !important;
+    transition: opacity 0.3s ease;
+    margin-top: 10px;
+}
+
+.student-mobility-btn-gradient:hover {
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+
 
