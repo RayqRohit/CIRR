@@ -40,12 +40,36 @@ $(document).ready(function () {
         }
 
         // Special check for Value Slider: Display as grid if 4 or fewer cards
-        if (sliderType === 'value') {
-            var valueSlideCount = $slider.children('.student-mobility-value-slide').length;
+        if (sliderType === 'value' || sliderType === 'research-partners') {
+            var slideClass = sliderType === 'value' ? '.student-mobility-value-slide' : '.research-mobility-partner-slide';
+            var sliderClass = sliderType === 'value' ? 'student-mobility-value-slider' : 'research-mobility-partners-slider';
+            var valueSlideCount = $slider.children(slideClass).length;
             if (valueSlideCount <= 4) {
-                $slider.addClass('row g-4').removeClass('student-mobility-value-slider');
-                $slider.find('.student-mobility-value-slide').addClass('col-lg-3 col-md-6').removeClass('px-2 mb-4 student-mobility-value-slide');
-                $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
+                $slider.addClass('row g-4').removeClass(sliderClass);
+                $slider.find(slideClass).addClass('col-lg-3 col-md-6').removeClass('px-2 mb-4 ' + slideClass.substring(1));
+                $slider.siblings('.student-mobility-slider-controls, .research-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
+                return;
+            }
+        }
+
+        // Special check for Other Projects Slider: Display as grid if 3 or fewer cards
+        if (sliderType === 'other-projects') {
+            var otherSlideCount = $slider.children('.research-mobility-other-slide').length;
+            if (otherSlideCount <= 3) {
+                $slider.addClass('row g-4').removeClass('research-mobility-other-slider mx-n2');
+                $slider.find('.research-mobility-other-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 mb-4 research-mobility-other-slide');
+                $slider.siblings('.research-mobility-other-controls').removeClass('d-flex').addClass('d-none');
+                return;
+            }
+        }
+
+        // Special check for Staff Mobility Slider: Display as grid if 3 or fewer cards
+        if (sliderType === 'staff-mobility') {
+            var staffSlideCount = $slider.children('.staff-mobility-slide').length;
+            if (staffSlideCount <= 3) {
+                $slider.addClass('row g-4').removeClass('staff-mobility-slider mx-n2');
+                $slider.find('.staff-mobility-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 mb-4 staff-mobility-slide');
+                $slider.siblings('.staff-mobility-controls').removeClass('d-flex').addClass('d-none');
                 return;
             }
         }
@@ -65,12 +89,12 @@ $(document).ready(function () {
                 return value;
             }
 
-            if (sliderType === 'inbound' || sliderType === 'outbound' || sliderType === 'value') {
+            if (sliderType === 'inbound' || sliderType === 'outbound' || sliderType === 'value' || sliderType === 'research-partners' || sliderType === 'other-projects' || sliderType === 'staff-mobility') {
                 // Calculation for standard sliding (1 by 1)
-                var slidesToShow = getSetting('slidesToShow', sliderType === 'value' ? 4 : 3);
+                var slidesToShow = getSetting('slidesToShow', (sliderType === 'value' || sliderType === 'research-partners') ? 4 : 3);
                 var totalSteps = Math.max(slick.slideCount - slidesToShow + 1, 1);
                 progress = ((currentSlide + 1) / totalSteps) * 100;
-            } else if (sliderType === 'students' || sliderType === 'abroad') {
+            } else if (sliderType === 'students' || sliderType === 'abroad' || sliderType === 'outbound-faculty') {
                 // Calculation for grid sliding (by pages/rows)
                 var slidesToScroll = getSetting('slidesToScroll', 4);
                 var currentStep = Math.ceil(currentSlide / slidesToScroll) + 1;
@@ -214,6 +238,98 @@ $(document).ready(function () {
             ]
         },
         'value'
+    );
+
+    // ==========================================
+    // 6. Research Mobility Partners Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.research-mobility-partners-slider'),
+        $('.research-mobility-partners-progress-bar'),
+        $('.research-mobility-partners-prev'),
+        $('.research-mobility-partners-next'),
+        {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                { breakpoint: 1200, settings: { slidesToShow: 3 } },
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        },
+        'research-partners'
+    );
+
+    // ==========================================
+    // 7. Research Mobility Other Projects Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.research-mobility-other-slider'),
+        $('.research-mobility-other-progress-bar'),
+        $('.research-mobility-other-prev'),
+        $('.research-mobility-other-next'),
+        {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        },
+        'other-projects'
+    );
+
+    // ==========================================
+    // 8. Staff Mobility Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.staff-mobility-slider'),
+        $('.staff-mobility-progress-bar'),
+        $('.staff-mobility-prev'),
+        $('.staff-mobility-next'),
+        {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        },
+        'staff-mobility'
+    );
+
+    // ==========================================
+    // 9. Outbound Faculty Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.staff-mobility-faculty-slider'),
+        $('.staff-mobility-faculty-progress-bar'),
+        $('.staff-mobility-faculty-prev'),
+        $('.staff-mobility-faculty-next'),
+        {
+            rows: 2,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: false,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: { rows: 2, slidesToShow: 2, slidesToScroll: 2 }
+                },
+                {
+                    breakpoint: 768,
+                    settings: { rows: 1, slidesToShow: 1, slidesToScroll: 1 }
+                }
+            ]
+        },
+        'outbound-faculty'
     );
 
 });

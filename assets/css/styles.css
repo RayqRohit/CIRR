@@ -120,7 +120,7 @@ img {
     width: 130%;
     max-width: none;
     z-index: 1;
-    
+
 }
 
 .student-mobility-hero {
@@ -234,7 +234,8 @@ img {
 .student-mobility-program-card {
     border-radius: 12px;
     overflow: hidden;
-    background-color: #0f0445; /* Very dark blue from reference */
+    background-color: #0f0445;
+    /* Very dark blue from reference */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -242,7 +243,7 @@ img {
 }
 
 /* Force bootstrap columns to flex so height:100% works perfectly in grid mode */
-.student-mobility-outbound-section .row > div {
+.student-mobility-outbound-section .row>div {
     display: flex;
 }
 
@@ -475,7 +476,7 @@ img {
     display: none;
 }
 
-.student-mobility-inbound-slider.slick-initialized ~ .student-mobility-slider-controls {
+.student-mobility-inbound-slider.slick-initialized~.student-mobility-slider-controls {
     display: flex !important;
 }
 
@@ -515,6 +516,7 @@ img {
 .student-mobility-nav-buttons button:hover {
     background-color: #2a2080;
 }
+
 .student-mobility-nav-buttons button.slick-disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -599,7 +601,7 @@ img {
 }
 
 .student-mobility-value-title {
-   font-family: var(--font-polymath-bold);
+    font-family: var(--font-polymath-bold);
     font-size: 60px;
     background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
     -webkit-background-clip: text;
@@ -704,3 +706,511 @@ img {
 
 
 
+/*   <!-- ==========================================================================
+     RESEARCH MOBILITY
+     ========================================================================== --> */
+
+/* Research Mobility Section */
+.research-mobility-projects-section {
+    background-color: #ffffff;
+}
+
+.research-mobility-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #1a1460;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.research-mobility-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 48px;
+}
+
+.research-mobility-text-gradient {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.research-mobility-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #000;
+}
+
+.research-mobility-badge {
+    background-color: #FFC900;
+    color: #000;
+    font-family: var(--font-figtree-bold);
+    font-size: 15px;
+    padding: 12px 16px;
+    border-radius: 20px;
+}
+
+.research-mobility-project-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.research-mobility-project-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.research-mobility-grant {
+    font-family: var(--font-figtree-bold);
+    font-size: 26px;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.research-mobility-grant::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.2px;
+    background: linear-gradient(90deg, #91909b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.research-mobility-stat-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 18px;
+    color: #1a1460;
+    margin-bottom: 4px;
+}
+
+.research-mobility-stat-value {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 0;
+}
+
+.research-mobility-partners-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 20px;
+    color: #1a1460;
+}
+
+.research-mobility-partner-card {
+    height: 420px;
+}
+
+.research-mobility-partner-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.research-mobility-partner-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.research-mobility-partner-badge {
+    font-size: 14px;
+    font-family: var(--font-figtree-bold);
+    letter-spacing: 0.5px;
+}
+
+.research-mobility-partner-name {
+    font-size: 20px;
+    font-family: var(--font-figtree-bold);
+}
+
+.research-mobility-slider-controls {
+    display: none;
+}
+
+/* Other Projects Section */
+.research-mobility-other-projects-section {
+    background-color: #ffffff;
+}
+
+.research-mobility-other-card {
+    background: #ffffff;
+    border: 2px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(#ffffff, #ffffff), var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+}
+
+.research-mobility-other-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.research-mobility-other-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.research-mobility-other-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+.research-mobility-other-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #111;
+    line-height: 1.5;
+}
+
+.research-mobility-other-divider {
+    border-top: 1px solid #c4c4c4;
+    opacity: 1;
+    margin: 0;
+}
+
+.research-mobility-other-grant {
+    font-family: var(--font-figtree-bold);
+    font-size: 18px;
+    color: #000;
+}
+
+/* =========================================================
+   International Partnership Section
+   ========================================================= */
+
+.research-mobility-partnership-section {
+    background-color: #0f0445;
+    color: #ffffff;
+}
+
+.research-mobility-partnership-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 30px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.research-mobility-partnership-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 64px;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    color: #ffcc00;
+    margin-bottom: 28px;
+}
+
+.research-mobility-partnership-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d1d1d1;
+    max-width: 620px;
+    margin-bottom: 0;
+}
+
+.research-mobility-partnership-images {
+    position: relative;
+    width: 100%;
+    height: 560px;
+}
+
+.research-mobility-partnership-img-1 {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    width: 48%;
+    height: 85%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px !important;
+}
+
+.research-mobility-partnership-img-2 {
+    position: absolute;
+    bottom: 3%;
+    right: 0;
+    width: 48%;
+    height: 85%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px !important;
+}
+
+/* =========================================================
+   Springer Nature Partnership Section
+   ========================================================= */
+
+.research-mobility-springer-section {
+    background-color: #f7f7f7;
+}
+
+.research-mobility-springer-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #0f0445;
+    letter-spacing: -0.5px;
+}
+
+.research-mobility-springer-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.research-mobility-springer-title .text-gradient {
+    background: linear-gradient(90deg, #b83280 0%, #4c30c7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.research-mobility-springer-card {
+    background-color: #0f0445;
+    color: #ffffff;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.research-mobility-springer-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #ffcc00;
+    line-height: 1.3;
+}
+
+.research-mobility-springer-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #d1d1d1;
+    line-height: 1.6;
+}
+
+.research-mobility-springer-logo {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.research-mobility-springer-image-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.research-mobility-springer-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+    <!-- ==========================================================================
+    STAFF MOBILITY
+    ========================================================================== -->
+*/
+
+.staff-mobility-section {
+    background-color: #ffffff;
+}
+
+.staff-mobility-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000000;
+    letter-spacing: -1px;
+}
+
+.staff-mobility-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    color: #0f0445;
+    line-height: 1.1;
+}
+
+.staff-mobility-title .text-gradient {
+    background: linear-gradient(90deg, #b83280 0%, #4c30c7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.staff-mobility-desc {
+    font-family: var(--font-figtree-medium);
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.staff-mobility-card {
+    background-color: #0f0445;
+    border: none;
+}
+
+.staff-mobility-card-img-wrapper {
+    height: 380px;
+}
+
+.staff-mobility-card-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff-mobility-card-content {
+    background-color: #0b0433;
+    color: #ffffff;
+}
+
+.staff-mobility-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 22px;
+    color: #ffcc00;
+}
+
+.staff-mobility-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #d1d1d1;
+    line-height: 1.5;
+}
+
+/* Slick Slider Equal Height Fix */
+.staff-mobility-slider .slick-track {
+    display: flex !important;
+}
+
+.staff-mobility-slider .slick-slide {
+    height: auto !important;
+    display: flex !important;
+}
+
+.staff-mobility-slider .slick-slide > div {
+    display: flex;
+    width: 100%;
+}
+
+.staff-mobility-slide {
+    display: flex !important;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.staff-mobility-card {
+    width: 100%;
+    flex-grow: 1;
+}
+/* =========================================================
+   Outbound Faculty Mobility Section
+   ========================================================= */
+
+.staff-mobility-outbound-section {
+    background-color: #f7f7f7;
+}
+
+/* CTA Banner */
+.staff-mobility-cta {
+    background-color: #0F0445;
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.staff-mobility-cta::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(20%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #362A74 0%, rgba(102, 79, 218, 0.25) 100%);
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.staff-mobility-cta:hover::after {
+    box-shadow: inset 20px 0 100px rgba(102, 79, 218, 0.5), 0 0 0 40px rgba(59, 42, 140, 0.5), 0 0 0 80px rgba(59, 42, 140, 0.3);
+    transform: translate(15%, -50%) scale(1.02);
+}
+
+.staff-mobility-cta .row {
+    position: relative;
+    z-index: 2;
+}
+
+.staff-mobility-cta-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 40px;
+    color: #FFC900;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    max-width: 700px;
+}
+
+.staff-mobility-cta-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    max-width: 580px;
+}
+
+.staff-mobility-cta-btn {
+    display: inline-block;
+    background-color: #FFC900;
+    color: #000;
+    font-family: var(--font-figtree-bold);
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.staff-mobility-cta-btn:hover {
+    background-color: #e5b400;
+    color: #000;
+}
+
+/* Grid Area */
+.staff-mobility-grid-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #a249ba;
+}
+
+/* Faculty Cards */
+.staff-mobility-faculty-card {
+    background-color: #11064d;
+}
+
+.staff-mobility-faculty-img-wrapper {
+    width: 100%;
+    height: 280px;
+    background-color: #ccc;
+}
+
+.staff-mobility-faculty-info {
+    background-color: #160e48;
+}
+
+.staff-mobility-faculty-name {
+    font-family: var(--font-figtree-bold);
+    font-size: 18px;
+}
+
+.staff-mobility-faculty-dept {
+    font-family: var(--font-figtree-bold);
+    font-size: 14px;
+}
