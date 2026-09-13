@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Figtree-Regular';
+    src: url('../fonts/Figtree-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('../fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-SemiBold';
+    src: url('../fonts/Figtree-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree-Bold';
+    src: url('../fonts/Figtree-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Polymath Display Regular';
+    src: url('../fonts/Polymath Display Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Polymath Display Medium';
+    src: url('../fonts/Polymath Display Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Polymath Display Semibold';
+    src: url('../fonts/Polymath Display Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Polymath Display Bold';
+    src: url('../fonts/Polymath Display Bold.ttf') format('truetype');
+}
+
+:root {
+    --font-figtree-regular: 'Figtree-Regular', sans-serif;
+    --font-figtree-medium: 'Figtree-Medium', sans-serif;
+    --font-figtree-semibold: 'Figtree-SemiBold', sans-serif;
+    --font-figtree-bold: 'Figtree-Bold', sans-serif;
+
+    --font-polymath-regular: 'Polymath Display Regular', sans-serif;
+    --font-polymath-medium: 'Polymath Display Medium', sans-serif;
+    --font-polymath-semibold: 'Polymath Display Semibold', sans-serif;
+    --font-polymath-bold: 'Polymath Display Bold', sans-serif;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* <!-- ==========================================================================
+     Student Mobility
+     ========================================================================== --> */
+
+/* Student Mobility Section */
+.student-mobility-section {
+    background-image: url('../images/student-banner/cirr-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.student-mobility-content {
+    padding-right: 20px;
+}
+
+.student-mobility-badge {
+    display: inline-block;
+    background: #ffffff;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-family: var(--font-figtree-bold);
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.student-mobility-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 64px;
+    color: #110B45;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.student-mobility-desc {
+    font-family: var(--font-figtree-medium);
+    font-size: 20px;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.student-mobility-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-mobility-globe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    max-width: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.student-mobility-hero {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 991px) {
+    .student-mobility-section {
+        padding: 60px 0;
+    }
+
+    .student-mobility-content {
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+
+    .student-mobility-title {
+        font-size: 44px;
+    }
+
+    .student-mobility-globe {
+        width: 110%;
+    }
+}
