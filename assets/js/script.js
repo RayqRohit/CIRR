@@ -1,60 +1,125 @@
-$(document).ready(function() {
-    var $slider = $('.student-mobility-inbound-slider');
-    var $progressBar = $('.student-mobility-progress-bar');
-    
-    // Only initialize if there are more than 3 cards
-    if ($slider.children().length > 3) {
-        
-        function updateProgress(slick, currentSlide) {
-            var slidesToShow = slick.options ? slick.options.slidesToShow : 3;
-            // Handle responsive changes if needed by checking slick.activeBreakpoint
-            if (slick.activeBreakpoint) {
-                var responsiveSettings = slick.options.responsive.find(function(r) { return r.breakpoint === slick.activeBreakpoint });
-                if (responsiveSettings) slidesToShow = responsiveSettings.settings.slidesToShow;
+$(document).ready(function () {
+
+    // Reusable function to initialize slick slider with a progress bar
+    function setupSlickWithProgress($slider, $progressBar, $prev, $next, slickConfig, sliderType) {
+        if (!$slider.length) return;
+
+        // Special check for Inbound Slider: Display as grid if 3 or fewer cards
+        if (sliderType === 'inbound') {
+            var slideCount = $slider.children('.student-mobility-slide').length;
+            if (slideCount <= 3) {
+                $slider.addClass('row g-4').removeClass('student-mobility-inbound-slider');
+                $slider.find('.student-mobility-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 student-mobility-slide');
+                $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
+                return;
             }
-            
-            var steps = slick.slideCount - slidesToShow + 1;
-            if (steps < 1) steps = 1;
-            var calc = ((currentSlide + 1) / steps) * 100;
-            $progressBar.css('width', calc + '%');
         }
 
-        $slider.on('init', function(event, slick) {
+        // Special check for Students Grid Slider: Display as static grid if 8 or fewer cards
+        if (sliderType === 'students') {
+            var studentSlideCount = $slider.children('.student-mobility-students-slide').length;
+            if (studentSlideCount <= 8) {
+                $slider.addClass('row g-4').removeClass('student-mobility-students-slider');
+                $slider.find('.student-mobility-students-slide').addClass('col-lg-3 col-md-6 col-sm-6').removeClass('px-2 mb-4 student-mobility-students-slide');
+                $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
+                return;
+            }
+        }
+
+        function updateProgress(slick, currentSlide) {
+            var progress = 0;
+            
+            // Helper to get current responsive setting
+            function getSetting(key, defaultValue) {
+                var value = slick.options ? slick.options[key] : defaultValue;
+                if (slick.activeBreakpoint) {
+                    var responsiveSettings = slick.options.responsive.find(function(r) { return r.breakpoint === slick.activeBreakpoint });
+                    if (responsiveSettings && responsiveSettings.settings[key] !== undefined) {
+                        value = responsiveSettings.settings[key];
+                    }
+                }
+                return value;
+            }
+
+            if (sliderType === 'inbound') {
+                // Calculation for standard sliding (1 by 1)
+                var slidesToShow = getSetting('slidesToShow', 3);
+                var totalSteps = Math.max(slick.slideCount - slidesToShow + 1, 1);
+                progress = ((currentSlide + 1) / totalSteps) * 100;
+            } else if (sliderType === 'students') {
+                // Calculation for grid sliding (by pages/rows)
+                var slidesToScroll = getSetting('slidesToScroll', 4);
+                var currentStep = Math.ceil(currentSlide / slidesToScroll) + 1;
+                var totalSteps = Math.ceil(slick.slideCount / slidesToScroll);
+                if (totalSteps < 1) totalSteps = 1;
+                progress = (currentStep / totalSteps) * 100;
+            }
+
+            $progressBar.css('width', progress + '%');
+        }
+
+        $slider.on('init', function (event, slick) {
             updateProgress(slick, 0);
         });
 
-        $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             updateProgress(slick, nextSlide);
         });
 
-        $slider.slick({
+        // Attach controls to config
+        slickConfig.prevArrow = $prev;
+        slickConfig.nextArrow = $next;
+
+        $slider.slick(slickConfig);
+    }
+
+    // ==========================================
+    // 1. Inbound Student Mobility Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.student-mobility-inbound-slider'),
+        $('.student-mobility-progress-bar'),
+        $('.student-mobility-prev'),
+        $('.student-mobility-next'),
+        {
             slidesToShow: 3,
             slidesToScroll: 1,
-            arrows: true,
-            prevArrow: $('.student-mobility-prev'),
-            nextArrow: $('.student-mobility-next'),
             infinite: false,
+            arrows: true,
+            responsive: [
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        },
+        'inbound'
+    );
+
+    // ==========================================
+    // 2. International Students Grid Slider
+    // ==========================================
+    setupSlickWithProgress(
+        $('.student-mobility-students-slider'),
+        $('.student-mobility-students-progress-bar'),
+        $('.student-mobility-students-prev'),
+        $('.student-mobility-students-next'),
+        {
+            rows: 2,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: false,
+            arrows: true,
             responsive: [
                 {
                     breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                    }
+                    settings: { rows: 2, slidesToShow: 2, slidesToScroll: 2 }
                 },
                 {
                     breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                    }
+                    settings: { rows: 1, slidesToShow: 1, slidesToScroll: 1 }
                 }
             ]
-        });
-        
-    } else {
-        // Just display as flex grid if 3 or less
-        $slider.addClass('row g-4').removeClass('student-mobility-inbound-slider');
-        $slider.find('.student-mobility-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 student-mobility-slide');
-        // Hide the controls since slick is not initialized
-        $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
-    }
+        },
+        'students'
+    );
+
 });
