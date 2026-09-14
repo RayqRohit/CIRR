@@ -811,7 +811,7 @@ img {
 }
 
 .research-mobility-partner-overlay {
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .research-mobility-partner-badge {
@@ -1093,7 +1093,7 @@ img {
     display: flex !important;
 }
 
-.staff-mobility-slider .slick-slide > div {
+.staff-mobility-slider .slick-slide>div {
     display: flex;
     width: 100%;
 }
@@ -1108,6 +1108,7 @@ img {
     width: 100%;
     flex-grow: 1;
 }
+
 /* =========================================================
    Outbound Faculty Mobility Section
    ========================================================= */
@@ -1213,4 +1214,1361 @@ img {
 .staff-mobility-faculty-dept {
     font-family: var(--font-figtree-bold);
     font-size: 14px;
+}
+
+/* =========================================================
+   International Relations Section
+   ========================================================= */
+
+.international-relations-section {
+    background-color: #fff;
+}
+
+.international-relations-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+}
+
+.international-relations-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+}
+
+.international-relations-text-gradient {
+    background: linear-gradient(90deg, #d33c82 0%, #5a4bdf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.international-relations-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+/* Vision Card Outline Gradient */
+.international-relations-card-vision {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.international-relations-card-vision::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px;
+    /* Border width */
+    background: linear-gradient(135deg, #d33c82 0%, #5a4bdf 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.international-relations-card-mission {
+    background-color: #0b0433;
+}
+
+.international-relations-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #000;
+}
+
+/* =========================================================
+   Director's Message Section
+   ========================================================= */
+
+.international-relations-director-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+.international-relations-director-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+    color: #0b0433;
+}
+
+.international-relations-director-title-highlight {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.international-relations-director-name {
+    font-family: var(--font-polymath-bold);
+    font-size: 32px;
+    color: #0b0433;
+}
+
+.international-relations-director-badge {
+    background-color: #0b0433 !important;
+    color: #fff !important;
+    font-family: var(--font-figtree-regular);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.international-relations-director-img {
+    height: auto;
+    transform: scale(1.1);
+    transform-origin: bottom center;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+/* =========================================================
+   Our MoUs Section
+   ========================================================= */
+
+.international-relations-mous-section {
+    background-color: #0f0445;
+}
+
+.international-relations-mous-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #fff;
+}
+
+.international-relations-mous-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+    color: #ffcc00;
+    letter-spacing: 1px;
+}
+
+.international-relations-mous-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.international-relations-mous-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+/* Gradient border for the card */
+.international-relations-mous-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 3px;
+    background: linear-gradient(135deg, #d33c82 0%, #5a4bdf 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.international-relations-mous-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 36px;
+    background: linear-gradient(90deg, #B53C72 0%, #5641E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    letter-spacing: -0.5px;
+}
+
+.international-relations-mous-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #333;
+}
+
+.international-relations-mous-btn {
+    background-color: #ffcc00;
+    color: #0b0433 !important;
+    border: none;
+    font-family: var(--font-polymath-bold);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.international-relations-mous-btn:hover {
+    background-color: #e6b800;
+    color: #0b0433;
+}
+
+/* =========================================================
+   Events & News Section
+   ========================================================= */
+
+.international-relations-events-section {
+    background-color: #fff;
+}
+
+.international-relations-events-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #0b0433;
+}
+
+.international-relations-events-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.international-relations-events-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #333;
+}
+
+.international-relations-event-card {
+    background-color: #0f0445;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.international-relations-event-date {
+    background-color: #fff;
+    min-width: 180px;
+    position: relative;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+/* Gradient border for the date box */
+.international-relations-event-date::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, #d33c82 0%, #5a4bdf 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.international-relations-event-day {
+    font-family: var(--font-polymath-bold);
+    font-size: 48px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #B53C72 0%, #5641E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.international-relations-event-month {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #B53C72 0%, #5641E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.international-relations-event-content {
+    flex-grow: 1;
+}
+
+.international-relations-event-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #ffcc00;
+}
+
+.international-relations-event-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #e2e8f0;
+}
+
+/* =========================================================
+   Student Voices Section
+   ========================================================= */
+
+.international-relations-voices-section {
+    background-color: #f8f9fa;
+}
+
+.international-relations-voices-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #0b0433;
+}
+
+.international-relations-voices-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+    color: #0b0433;
+}
+
+.international-relations-voices-title-highlight {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.international-relations-voices-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+/* Gradient border for the card */
+.international-relations-voice-card {
+    position: relative;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(135deg, #d33c82 0%, #5a4bdf 100%) border-box;
+    z-index: 1;
+}
+
+.international-relations-voice-quote {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.international-relations-voice-quote::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: linear-gradient(90deg, #91909b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.international-relations-voice-name {
+    font-family: var(--font-figtree-bold);
+    font-size: 18px;
+    color: #0b0433;
+}
+
+.international-relations-voice-details {
+    font-family: var(--font-figtree-regular);
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Slick Slider overrides for Student Voices */
+.international-relations-voices-slider .slick-track {
+    display: flex !important;
+}
+
+.international-relations-voices-slider .slick-slide {
+    height: auto;
+    display: flex !important;
+    outline: none !important;
+}
+
+.international-relations-voices-slider .slick-slide>div {
+    display: flex;
+    width: 100%;
+}
+
+.international-relations-voices-slider .px-3 {
+    width: 100%;
+    display: flex;
+}
+
+.international-relations-voices-slider .international-relations-voice-card {
+    width: 100%;
+}
+
+/* Custom Slick Dots */
+.international-relations-voices-slider .slick-dots,
+.international-relations-team-slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    gap: 8px;
+}
+
+.international-relations-voices-slider .slick-dots li button,
+.international-relations-team-slider .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #cbd5e1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.international-relations-voices-slider .slick-dots li.slick-active button,
+.international-relations-team-slider .slick-dots li.slick-active button {
+    background: #5a4bdf;
+    width: 24px;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   Our Team Section
+   ========================================================= */
+
+.international-relations-team-section {
+    background-color: #fff;
+}
+
+.international-relations-team-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #0b0433;
+}
+
+.international-relations-team-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+    color: #0b0433;
+    letter-spacing: -0.5px;
+}
+
+.international-relations-team-title-highlight {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.international-relations-team-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #4a4a4a;
+    max-width: 900px;
+}
+
+.international-relations-team-card {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.international-relations-team-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.international-relations-team-info {
+    background-color: #0f0445;
+    color: #fff;
+}
+
+.international-relations-team-name {
+    font-family: var(--font-figtree-bold);
+    font-size: 16px;
+    color: #fff;
+}
+
+.international-relations-team-role {
+    font-family: var(--font-figtree-regular);
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+/* Our Team Slider Controls */
+.international-relations-team-prev,
+.international-relations-team-next {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0b0433;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.international-relations-team-prev.slick-disabled,
+.international-relations-team-next.slick-disabled {
+    background-color: #898baf;
+    cursor: not-allowed;
+}
+
+.international-relations-team-progress-track {
+    height: 5px;
+    background-color: #0b0433;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.international-relations-team-progress-bar {
+    height: 100%;
+    background-color: #ffc107;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* =========================================================
+   Student Success Stories (Video Slider) Section
+   ========================================================= */
+
+.international-relations-video-section {
+    background-color: #0b0433;
+}
+
+.international-relations-video-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #fff;
+}
+
+.international-relations-video-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.international-relations-video-title-highlight {
+    color: #ffc107;
+    /* Yellow highlight */
+}
+
+.international-relations-video-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #d1d5db;
+    max-width: 900px;
+}
+
+/* Video Slider Center Mode Effects */
+.international-relations-video-slider {
+    padding: 20px 0;
+}
+
+.international-relations-video-slider .slick-slide {
+    transform: scale(0.92);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+    padding: 0 5px;
+    margin: 0 -15px;
+    /* Pull slides closer together */
+}
+
+.international-relations-video-slider .slick-slide.slick-center {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Custom Dash Slick Dots */
+.international-relations-video-slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    gap: 8px;
+}
+
+.international-relations-video-slider .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 24px;
+    height: 4px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.international-relations-video-slider .slick-dots li.slick-active button {
+    background: #ffc107;
+    width: 48px;
+}
+
+/* Fix sticky dragging bug over iframes */
+.international-relations-video-slider .slick-list.dragging iframe {
+    pointer-events: none;
+}
+
+/* Allow dragging on side videos by disabling their iframe interactions */
+.international-relations-video-slider .slick-slide:not(.slick-center) iframe {
+    pointer-events: none;
+}
+
+/* =========================================================
+   Pathway Exchange Section
+   ========================================================= */
+
+.pathway-exchange-section {
+    background-image: url('../images/cirr-pathway-hero/cirr-pathway-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa;
+    /* Fallback */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pathway-exchange-badge {
+    font-family: var(--font-figtree-bold);
+    font-size: 14px;
+    color: #0b0433;
+}
+
+.pathway-exchange-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.1;
+    color: #0b0433;
+}
+
+.pathway-exchange-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 20px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.pathway-exchange-btn-primary {
+    background-color: #0b0433;
+    color: #fff;
+    font-family: var(--font-figtree-bold);
+    font-size: 16px;
+    border: 1px solid #0b0433;
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-btn-primary:hover {
+    background-color: #0b0433;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.pathway-exchange-btn-outline {
+    background-color: transparent;
+    color: #0b0433;
+    font-family: var(--font-figtree-bold);
+    font-size: 16px;
+    border: 1px solid #0b0433;
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-btn-outline:hover {
+    background-color: #0b0433;
+    color: #fff;
+}
+
+.pathway-exchange-tag {
+    font-family: var(--font-figtree-medium);
+    font-size: 15px;
+    padding: 8px 18px;
+    color: #4b5563;
+    border: 1px solid #cbd5e1;
+}
+
+/* =========================================================
+   Global Journey Section
+   ========================================================= */
+
+.pathway-exchange-global-section {
+    background-color: #ffffff;
+}
+
+.pathway-exchange-global-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+}
+
+.pathway-exchange-global-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.pathway-exchange-global-title-blue {
+    color: #0b0433;
+}
+
+.pathway-exchange-global-title-purple {
+    color: #7c3aed;
+}
+
+.pathway-exchange-global-title-gray {
+    color: #6b7280;
+}
+
+.pathway-exchange-global-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+@media (max-width: 992px) {
+    .pathway-exchange-global-title {
+        font-size: 42px;
+    }
+}
+
+/* =========================================================
+   Pathway Exchange Gateway (Cards) Section
+   ========================================================= */
+
+.pathway-exchange-gateway-section {
+    background-color: #0f0445;
+}
+
+.pathway-exchange-gateway-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.pathway-exchange-gateway-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.1;
+    color: #ffc107;
+    /* Yellow title */
+}
+
+@media (max-width: 992px) {
+    .pathway-exchange-gateway-title {
+        font-size: 42px;
+    }
+}
+
+.pathway-exchange-gateway-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #d1d5db;
+    /* Light gray */
+    line-height: 1.6;
+}
+
+/* Cards */
+.pathway-exchange-gateway-card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pathway-exchange-gateway-card-img {
+    height: 350px;
+    width: 100%;
+}
+
+.pathway-exchange-gateway-card-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 24px;
+    color: #0b0433;
+    /* Dark blue */
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+
+.pathway-exchange-gateway-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #4b5563;
+    /* Gray */
+    line-height: 1.6;
+}
+
+/* Slider Controls */
+.pathway-exchange-gateway-controls {
+    width: 100%;
+}
+
+.pathway-exchange-gateway-prev,
+.pathway-exchange-gateway-next {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-gateway-prev:hover,
+.pathway-exchange-gateway-next:hover {
+    background-color: #fff;
+    color: #0b0433;
+}
+
+.pathway-exchange-gateway-prev.slick-disabled,
+.pathway-exchange-gateway-next.slick-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pathway-exchange-gateway-progress-track {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    width: 100%;
+}
+
+.pathway-exchange-gateway-progress-bar {
+    height: 100%;
+    background-color: #ffc107;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Equal height for Slick Slider cards */
+.pathway-exchange-gateway-slider .slick-track {
+    display: flex !important;
+}
+
+.pathway-exchange-gateway-slider .slick-slide {
+    height: auto;
+}
+
+.pathway-exchange-gateway-slider .slick-slide>div {
+    height: 100%;
+}
+
+.pathway-exchange-gateway-slider .slick-slide>div>.px-3 {
+    height: 100%;
+}
+
+/* =========================================================
+   Pathway Exchange Track Record Section
+   ========================================================= */
+
+.pathway-exchange-track-section {
+    background-color: #f8f9fa;
+    /* Light gray background */
+}
+
+.pathway-exchange-track-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #0b0433;
+}
+
+.pathway-exchange-track-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    line-height: 1.1;
+    color: #0b0433;
+}
+
+.pathway-exchange-track-highlight {
+    background: linear-gradient(90deg, #6b21a8, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+
+.pathway-exchange-track-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #4b5563;
+    /* Gray */
+    line-height: 1.6;
+}
+
+/* Stat Cards */
+.pathway-exchange-track-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.pathway-exchange-track-card:hover {
+    transform: translateY(-5px);
+}
+
+.pathway-exchange-track-card-dark {
+    background-color: #0f0445;
+    color: #ffffff;
+    border: 2px solid transparent;
+    /* To match dimensions with light card */
+}
+
+.pathway-exchange-track-card-light {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6) border-box;
+    border: 2px solid transparent;
+    color: #0f0445;
+}
+
+.pathway-exchange-track-stat {
+    font-family: var(--font-polymath-bold);
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.pathway-exchange-track-stat-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pathway-exchange-track-stat-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/* =========================================================
+   Pathway Exchange Value of Mobility Section
+   ========================================================= */
+
+.pathway-exchange-value-section {
+    background-color: #ffffff;
+}
+
+.pathway-exchange-value-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 7px;
+}
+
+.pathway-exchange-value-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 60px;
+    color: #0b0433;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.pathway-exchange-value-highlight {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pathway-exchange-value-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #444;
+}
+
+.pathway-exchange-value-card {
+    background: #ffffff;
+    border: 2px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(#ffffff, #ffffff), var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Force Slick Slider to use flexbox so slides stretch to equal height */
+.pathway-exchange-value-slider .slick-track {
+    display: flex !important;
+}
+
+.pathway-exchange-value-slider .slick-slide {
+    height: inherit !important;
+    display: flex !important;
+}
+
+.pathway-exchange-value-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.pathway-exchange-value-icon {
+    margin-bottom: 20px;
+}
+
+.pathway-exchange-value-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.pathway-exchange-value-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 26px;
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.pathway-exchange-value-card-text {
+    font-family: var(--font-figtree-regular, 'Figtree', sans-serif);
+    font-size: 16px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.pathway-exchange-value-progress-container {
+    height: 5px;
+    background-color: #1d1459;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pathway-exchange-value-progress-bar {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffc107;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.pathway-exchange-value-prev,
+.pathway-exchange-value-next {
+    background-color: #0b0433;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pathway-exchange-value-prev:hover,
+.pathway-exchange-value-next:hover {
+    background-color: #2a2080;
+}
+
+.pathway-exchange-value-prev.slick-disabled,
+.pathway-exchange-value-next.slick-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #797193;
+}
+
+/* =========================================================
+   Pathway Exchange Articulation Models
+   ========================================================= */
+
+.pathway-exchange-models-section {
+    background-color: #0f0445;
+    color: #ffffff;
+}
+
+.pathway-exchange-models-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.pathway-exchange-models-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    color: #ffc107;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.pathway-exchange-models-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 900px;
+}
+
+.pathway-exchange-models-card {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6) border-box;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    color: #0b0433;
+    text-align: left;
+}
+
+.pathway-exchange-models-badge {
+    background-color: #f3efff;
+    color: #0b0433;
+    font-family: var(--font-figtree-bold);
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    align-self: flex-start;
+}
+
+.pathway-exchange-models-card-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 28px;
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.pathway-exchange-models-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 15px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.pathway-exchange-models-card-desc::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: linear-gradient(90deg, #91909b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.pathway-exchange-models-formula {
+    font-family: var(--font-polymath-bold);
+    font-size: 32px;
+    color: #0b0433;
+}
+
+/* =========================================================
+   Pathway Exchange Partners Section
+   ========================================================= */
+
+.pathway-exchange-partners-section {
+    background-color: #ffffff;
+}
+
+.pathway-exchange-partners-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 7px;
+}
+
+.pathway-exchange-partners-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 60px;
+    color: #0b0433;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.pathway-exchange-partners-highlight {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pathway-exchange-partners-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #444;
+    max-width: 900px;
+}
+
+/* 3D Center Mode Slider Styles */
+.pathway-exchange-partners-slider-wrapper::before,
+.pathway-exchange-partners-slider-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.pathway-exchange-partners-slider-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.pathway-exchange-partners-slider-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.pathway-exchange-partners-slider {
+    padding: 40px 0 80px 0;
+    /* Space for scaling and dots */
+}
+
+.pathway-exchange-partners-slider .slick-list {
+    overflow: visible;
+}
+
+.pathway-exchange-partners-slide {
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+/* Outer cards (Left side default): scale down and push RIGHT towards center */
+.pathway-exchange-partners-slide:not(.slick-active) {
+    transform: scale(0.7) translateX(100px);
+}
+
+/* Outer cards (Right side): scale down and push LEFT towards center */
+.pathway-exchange-partners-slide.slick-center~.pathway-exchange-partners-slide:not(.slick-active) {
+    transform: scale(0.7) translateX(-100px);
+}
+
+.pathway-exchange-partners-slide.slick-active {
+    transform: scale(0.9);
+}
+
+.pathway-exchange-partners-slide.slick-center {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.pathway-exchange-partners-card {
+    border-radius: 20px;
+    height: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pathway-exchange-partners-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: 1;
+}
+
+.pathway-exchange-partners-overlay h4 {
+    font-family: var(--font-figtree-bold);
+    font-size: 24px;
+}
+
+.pathway-exchange-partners-overlay .badge {
+    font-family: var(--font-figtree-bold);
+    font-size: 12px;
+}
+
+/* Custom Dots for Partners Slider */
+.pathway-exchange-partners-slider .slick-dots {
+    bottom: 15px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 35px;
+}
+
+.pathway-exchange-partners-slider .slick-dots li {
+    width: 32px;
+    height: 8px;
+    margin: 0 5px;
+}
+
+.pathway-exchange-partners-slider .slick-dots li button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+.pathway-exchange-partners-slider .slick-dots li button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1.5px solid #a3a3a3;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-partners-slider .slick-dots li.slick-active button:before {
+    background-color: #ffc107;
+    border-color: #ffc107;
 }
