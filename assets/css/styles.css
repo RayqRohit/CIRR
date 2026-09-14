@@ -3166,3 +3166,72 @@ img {
     background: #8e8aab; /* Lighter color for disabled state */
     cursor: default;
 }
+
+/* ==========================================================================
+   GLOBAL DEGREE CTA SECTION
+   ========================================================================== */
+.pathway-exchange-cta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.pathway-exchange-cta-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    color: #6236A6; /* Solid purple for the first part */
+    line-height: 1.1;
+}
+
+.pathway-exchange-cta-highlight {
+    background: linear-gradient(90deg, #6236A6 0%, #B53C72 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pathway-exchange-cta-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.pathway-exchange-cta-btn-primary {
+    background: linear-gradient(90deg, #6236A6 0%, #B53C72 100%);
+    color: #fff;
+    border: none;
+    font-family: var(--font-figtree-semibold);
+    font-size: 18px;
+    padding: 12px 32px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.pathway-exchange-cta-btn-primary:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.pathway-exchange-cta-btn-outline {
+    font-family: var(--font-figtree-semibold);
+    font-size: 18px;
+    padding: 12px 32px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b0736;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #6236A6, #B53C72);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: transform 0.3s ease;
+}
+
+.pathway-exchange-cta-btn-outline:hover {
+    color: #0b0736;
+}
+
+.pathway-exchange-cta-img {
+    max-height: 450px;
+    object-fit: contain;
+}
