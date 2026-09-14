@@ -543,4 +543,116 @@ $(document).ready(function () {
         ]
     });
 
+    // ==========================================
+    // 15. Pathway Exchange Success Stories Slider
+    // ==========================================
+    $('.pathway-exchange-success-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    // ==========================================
+    // 16. Pathway Exchange Route Slider
+    // ==========================================
+    var $routeSlider = $('.pathway-exchange-route-carousel');
+    var $routeProgress = $('.pathway-exchange-route-progress-bar');
+    
+    if ($routeSlider.length) {
+        $routeSlider.on('init reInit afterChange', function (event, slick, currentSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            var calc = (i / slick.slideCount) * 100;
+            $routeProgress.css('width', calc + '%');
+        });
+
+        $routeSlider.slick({
+            centerMode: true,
+            centerPadding: '20%',
+            slidesToShow: 1,
+            arrows: true,
+            prevArrow: $('.pathway-exchange-route-prev'),
+            nextArrow: $('.pathway-exchange-route-next'),
+            dots: false,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        centerPadding: '10%'
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        centerPadding: '40px'
+                    }
+                }
+            ]
+        });
+    }
+
+    // ==========================================
+    // 17. Pathway Exchange Prep Slider
+    // ==========================================
+    var $prepSlider = $('.pathway-exchange-prep-carousel');
+    var $prepProgress = $('.pathway-exchange-prep-progress-bar');
+    
+    if ($prepSlider.length) {
+        $prepSlider.on('init reInit afterChange', function (event, slick, currentSlide) {
+            // When not infinite, currentSlide goes from 0 to (slideCount - slidesToShow)
+            var slidesVisible = slick.options.slidesToShow;
+            var maxIndex = slick.slideCount - slidesVisible;
+            if (maxIndex <= 0) maxIndex = 1;
+            
+            var i = currentSlide || 0;
+            var calc = ((i + 1) / (maxIndex + 1)) * 100;
+            // Prevent going over 100%
+            if (calc > 100) calc = 100;
+            
+            $prepProgress.css('width', calc + '%');
+        });
+
+        $prepSlider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: $('.pathway-exchange-prep-prev'),
+            nextArrow: $('.pathway-exchange-prep-next'),
+            dots: false,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }
+
 });

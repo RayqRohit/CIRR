@@ -2523,8 +2523,9 @@ img {
     font-size: 12px;
 }
 
-/* Custom Dots for Partners Slider */
-.pathway-exchange-partners-slider .slick-dots {
+/* Custom Dots for Partners and Success Sliders */
+.pathway-exchange-partners-slider .slick-dots,
+.pathway-exchange-success-slider .slick-dots {
     bottom: 15px !important;
     display: flex !important;
     justify-content: center;
@@ -2535,25 +2536,26 @@ img {
     margin-top: 35px;
 }
 
-.pathway-exchange-partners-slider .slick-dots li {
-    width: 32px;
-    height: 8px;
-    margin: 0 5px;
+.pathway-exchange-partners-slider .slick-dots li,
+.pathway-exchange-success-slider .slick-dots li {
+    margin: 0 4px;
+    width: 25px;
+    height: 3px;
 }
 
-.pathway-exchange-partners-slider .slick-dots li button {
-    width: 100%;
-    height: 100%;
+.pathway-exchange-partners-slider .slick-dots li button,
+.pathway-exchange-success-slider .slick-dots li button {
+    width: 25px;
+    height: 5px;
     padding: 0;
-    font-size: 0;
-    line-height: 0;
     color: transparent;
     border: none;
     background: transparent;
     position: relative;
 }
 
-.pathway-exchange-partners-slider .slick-dots li button:before {
+.pathway-exchange-partners-slider .slick-dots li button:before,
+.pathway-exchange-success-slider .slick-dots li button:before {
     content: '';
     display: block;
     position: absolute;
@@ -2568,7 +2570,599 @@ img {
     transition: all 0.3s ease;
 }
 
-.pathway-exchange-partners-slider .slick-dots li.slick-active button:before {
+.pathway-exchange-partners-slider .slick-dots li.slick-active button:before,
+.pathway-exchange-success-slider .slick-dots li.slick-active button:before {
     background-color: #ffc107;
     border-color: #ffc107;
+}
+
+/* ==========================================================================
+   PATHWAY EXCHANGE SUCCESS STORIES
+   ========================================================================== */
+.pathway-exchange-success-section {
+    background-color: #140b4b; /* Dark blue background */
+}
+
+.pathway-exchange-success-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #fff;
+}
+
+.pathway-exchange-success-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    color: #fff;
+}
+
+.pathway-exchange-success-highlight {
+    color: #ffc107;
+}
+
+.pathway-exchange-success-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #d1d1d1;
+}
+
+.pathway-exchange-success-stats-box {
+    border: 2px solid #fff;
+    background-color: #2b235d; 
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.pathway-exchange-success-stat-number {
+    font-family: var(--font-polymath-bold);
+    font-size: 64px;
+    color: #fff;
+    line-height: 1;
+}
+
+.pathway-exchange-success-stat-text {
+    font-family: var(--font-figtree-regular);
+    font-size: 15px;
+    color: #e0e0e0;
+    max-width: 220px;
+    line-height: 1.4;
+}
+
+.pathway-exchange-success-divider {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.pathway-exchange-success-slider .slick-list {
+    margin: 0 -12px;
+}
+
+.pathway-exchange-success-slide {
+    margin: 0 12px;
+    padding-bottom: 20px; /* space for shadow */
+    padding-top: 10px;
+}
+
+.pathway-exchange-success-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pathway-exchange-success-quote-icon svg {
+    color: #100d36;
+    width: 40px;
+    height: 40px;
+}
+
+.pathway-exchange-success-card-text {
+    font-family: var(--font-figtree-regular);
+    font-size: 14px;
+    color: #444;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.pathway-exchange-success-hr {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 1.5rem 0;
+    opacity: 0.2;
+}
+
+.pathway-exchange-success-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #100d36;
+    border-radius: 50%;
+}
+
+.pathway-exchange-success-author-name {
+    font-family: var(--font-figtree-bold);
+    font-size: 15px;
+    color: #100d36;
+}
+
+.pathway-exchange-success-author-detail {
+    font-family: var(--font-figtree-regular);
+    font-size: 13px;
+    color: #666;
+}
+
+/* ==========================================================================
+   PATHWAY EXCHANGE PROGRAMS LISTING
+   ========================================================================== */
+.pathway-exchange-programs-section {
+    background-color: #fff;
+}
+
+.pathway-exchange-programs-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #000;
+}
+
+.pathway-exchange-programs-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 64px;
+    color: #110b45;
+    line-height: 1;
+}
+
+.pathway-exchange-programs-title-gradient {
+    font-family: var(--font-polymath-bold);
+    font-size: 64px;
+    line-height: 1;
+    background: linear-gradient(90deg, #b03a7a 0%, #a46d9d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pathway-exchange-programs-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+    color: #333;
+}
+
+/* Filter Box */
+.pathway-exchange-filter-box {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+}
+
+.pathway-exchange-filter-label {
+    font-family: var(--font-figtree-semibold);
+    font-size: 14px;
+    color: #666;
+}
+
+.pathway-exchange-select {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: var(--font-figtree-medium);
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.pathway-exchange-select:focus {
+    border-color: #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    outline: none;
+}
+
+.pathway-exchange-search-icon {
+    left: 16px;
+    color: #999;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.pathway-exchange-view-all-btn {
+    background-color: #110b45;
+    color: #ffc107;
+    font-family: var(--font-figtree-bold);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.pathway-exchange-view-all-btn:hover {
+    background-color: #1a1265;
+    color: #ffc107;
+}
+
+/* Table */
+.pathway-exchange-table-responsive {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #110b45;
+}
+
+.pathway-exchange-table th {
+    background-color: #110b45;
+    color: #fff;
+    font-family: var(--font-figtree-bold);
+    font-size: 17px;
+    padding: 16px 20px;
+    border: none;
+    vertical-align: middle;
+}
+
+.pathway-exchange-table th:first-child,
+.pathway-exchange-table td:first-child {
+    padding-left: 40px;
+}
+
+.pathway-exchange-table tbody {
+    background: linear-gradient(180deg, #ADA0FF -179.27%, #FFF 100%);
+}
+
+.pathway-exchange-table tbody tr {
+    background-color: transparent !important;
+}
+
+.pathway-exchange-table td {
+    padding: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-family: var(--font-figtree-medium);
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+}
+
+.pathway-exchange-country {
+    font-size: 14px;
+    color: #110b45;
+}
+
+.pathway-exchange-university-name {
+    font-family: var(--font-figtree-semibold);
+    font-size: 18px;
+    color: #333;
+}
+
+.pathway-exchange-brochure-btn {
+    background-color: #110b45;
+    color: #fff;
+    font-family: var(--font-figtree-semibold);
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 8px 20px;
+    transition: background 0.3s ease;
+}
+
+.pathway-exchange-brochure-btn:hover {
+    background-color: #ffc107;
+    color: #110b45;
+}
+
+/* ==========================================================================
+   FIND YOUR ROUTE ABROAD SECTION
+   ========================================================================== */
+.pathway-exchange-route-section {
+    background-color: #0b0736;
+}
+
+.pathway-exchange-route-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 20px;
+}
+
+.pathway-exchange-route-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    color: #ffc107;
+    line-height: 1.1;
+}
+
+.pathway-exchange-route-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    opacity: 0.8;
+    max-width: 800px;
+}
+
+/* Carousel Center Mode */
+.pathway-exchange-route-carousel {
+    overflow: hidden;
+}
+
+.pathway-exchange-route-slide {
+    transition: all 0.4s ease;
+    opacity: 0.4;
+    transform: scale(0.85);
+    margin: 0 -40px;
+}
+
+.pathway-exchange-route-slide img {
+    border: 2px solid #fff;
+    border-radius: 15px !important;
+}
+
+.pathway-exchange-route-slide.slick-center {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+    position: relative;
+}
+
+/* Custom Nav */
+.pathway-exchange-route-progress {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 4px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.pathway-exchange-route-progress-bar {
+    background-color: #ffc107;
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.pathway-exchange-route-arrows button {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.pathway-exchange-route-arrows button:hover {
+    opacity: 0.7;
+}
+
+/* Filters */
+.pathway-exchange-route-filter {
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.pathway-exchange-route-select {
+    font-family: var(--font-figtree-medium);
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.pathway-exchange-route-select:focus {
+    border-color: #dee2e6;
+    box-shadow: none;
+    outline: none;
+}
+
+.pathway-exchange-route-search-icon {
+    left: 16px;
+    color: #999;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pathway-exchange-route-view-all {
+    background-color: #0b0736;
+    color: #ffc107;
+    font-family: var(--font-figtree-bold);
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-route-view-all:hover {
+    background-color: #1a1265;
+    color: #ffc107;
+}
+
+/* Cards */
+.pathway-exchange-route-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.pathway-exchange-route-badge {
+    background-color: #eee9f9;
+    color: #0b0736;
+    font-family: var(--font-figtree-bold);
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.pathway-exchange-route-card-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 24px;
+    color: #0b0736;
+}
+
+.pathway-exchange-route-card-subtitle {
+    font-family: var(--font-figtree-semibold);
+    font-size: 15px;
+    color: #333;
+}
+
+.pathway-exchange-route-tag {
+    background-color: #f7f7f7;
+    font-family: var(--font-figtree-medium);
+    font-size: 14px;
+    color: #333;
+}
+
+.pathway-exchange-route-tag-label {
+    color: #888;
+}
+
+.pathway-exchange-route-tag-sub {
+    color: #888;
+    font-style: italic;
+}
+
+.pathway-exchange-route-split-label {
+    font-family: var(--font-figtree-medium);
+    font-size: 13px;
+    color: #888;
+}
+
+.pathway-exchange-route-split-value {
+    font-family: var(--font-figtree-bold);
+    font-size: 16px;
+    color: #0b0736;
+}
+
+.pathway-exchange-route-download-btn {
+    background-color: #0b0736;
+    color: #fff;
+    font-family: var(--font-figtree-semibold);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-route-download-btn:hover {
+    background-color: #ffc107;
+    color: #0b0736;
+}
+
+/* ==========================================================================
+   LANGUAGE & TEST PREPARATION SECTION
+   ========================================================================== */
+.pathway-exchange-prep-section {
+    background-color: #f7f7f7;
+}
+
+.pathway-exchange-prep-subtitle {
+    font-family: var(--font-figtree-bold);
+    font-size: 28px;
+    color: #110b45;
+}
+
+.pathway-exchange-prep-title {
+    font-family: var(--font-polymath-bold);
+    font-size: 56px;
+    color: #110b45;
+    line-height: 1.1;
+}
+
+.pathway-exchange-prep-highlight {
+    background: linear-gradient(270deg, #8755D6 0%, #6236A6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pathway-exchange-prep-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 18px;
+}
+
+/* Cards */
+.pathway-exchange-prep-carousel .slick-track {
+    display: flex !important;
+}
+
+.pathway-exchange-prep-carousel .slick-slide {
+    height: inherit !important;
+    display: flex !important;
+}
+
+.pathway-exchange-prep-carousel .slick-slide > div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.pathway-exchange-prep-card {
+    border: 2px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.pathway-exchange-prep-card-default {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #ff4c4c, #7a3ee8);
+}
+.pathway-exchange-prep-card-alt-1 {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #ff7b7b, #7a3ee8);
+}
+.pathway-exchange-prep-card-alt-2 {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #ff6b8b, #7a3ee8);
+}
+.pathway-exchange-prep-card-alt-3 {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #ff4c4c, #b030b0);
+}
+
+.pathway-exchange-prep-card-title {
+    font-family: var(--font-figtree-bold);
+    font-size: 26px;
+    background: linear-gradient(90deg, #B53C72 0%, #5641E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pathway-exchange-prep-card-desc {
+    font-family: var(--font-figtree-regular);
+    font-size: 16px;
+    color: #333;
+}
+
+.pathway-exchange-prep-list {
+    font-family: var(--font-figtree-medium);
+    font-size: 16px;
+    color: #333;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Navigation */
+.pathway-exchange-prep-progress {
+    background-color: #110b45;
+    height: 5px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.pathway-exchange-prep-progress-bar {
+    background-color: #ffc107;
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.pathway-exchange-prep-arrows button {
+    background: #110b45;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pathway-exchange-prep-arrows button svg {
+    stroke: #fff;
+}
+
+.pathway-exchange-prep-arrows button:hover {
+    background: #7a3ee8;
+}
+
+.pathway-exchange-prep-arrows button.slick-disabled {
+    background: #8e8aab; /* Lighter color for disabled state */
+    cursor: default;
 }
