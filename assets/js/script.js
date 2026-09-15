@@ -20,7 +20,7 @@ $(document).ready(function () {
             var slideClass = sliderType === 'students' ? '.student-mobility-students-slide' : '.student-mobility-abroad-slide';
             var sliderClass = sliderType === 'students' ? 'student-mobility-students-slider' : 'student-mobility-abroad-slider';
             var studentSlideCount = $slider.children(slideClass).length;
-            if (studentSlideCount <= 8) {
+            if (studentSlideCount <= 8 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass(sliderClass);
                 $slider.find(slideClass).addClass('col-lg-3 col-md-6 col-sm-6').removeClass('px-2 mb-4 ' + slideClass.substring(1));
                 $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
@@ -31,9 +31,9 @@ $(document).ready(function () {
         // Special check for Outbound Slider: Display as grid if 3 or fewer cards
         if (sliderType === 'outbound') {
             var outboundSlideCount = $slider.children('.student-mobility-outbound-slide').length;
-            if (outboundSlideCount <= 3) {
+            if (outboundSlideCount <= 3 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass('student-mobility-outbound-slider');
-                $slider.find('.student-mobility-outbound-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 student-mobility-outbound-slide');
+                $slider.find('.student-mobility-outbound-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 mb-4 student-mobility-outbound-slide');
                 $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
                 return;
             }
@@ -46,7 +46,7 @@ $(document).ready(function () {
             var sliderClass = sliderType === 'value' ? 'student-mobility-value-slider' :
                 (sliderType === 'pathway-value' ? 'pathway-exchange-value-slider' : 'research-mobility-partners-slider');
             var valueSlideCount = $slider.children(slideClass).length;
-            if (valueSlideCount <= 4) {
+            if (valueSlideCount <= 4 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass(sliderClass);
                 $slider.find(slideClass).addClass('col-lg-3 col-md-6').removeClass('px-2 mb-4 ' + slideClass.substring(1));
                 $slider.siblings('.student-mobility-slider-controls, .research-mobility-slider-controls, .pathway-exchange-value-slider-controls').removeClass('d-flex').addClass('d-none');
@@ -57,7 +57,7 @@ $(document).ready(function () {
         // Special check for Other Projects Slider: Display as grid if 3 or fewer cards
         if (sliderType === 'other-projects') {
             var otherSlideCount = $slider.children('.research-mobility-other-slide').length;
-            if (otherSlideCount <= 3) {
+            if (otherSlideCount <= 3 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass('research-mobility-other-slider mx-n2');
                 $slider.find('.research-mobility-other-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 mb-4 research-mobility-other-slide');
                 $slider.siblings('.research-mobility-other-controls').removeClass('d-flex').addClass('d-none');
@@ -240,7 +240,7 @@ $(document).ready(function () {
                 },
                 {
                     breakpoint: 768,
-                    settings: { rows: 1, slidesToShow: 1, slidesToScroll: 1 }
+                    settings: { rows: 2, slidesToShow: 1, slidesToScroll: 1 }
                 }
             ]
         },
@@ -575,7 +575,7 @@ $(document).ready(function () {
     // ==========================================
     var $routeSlider = $('.pathway-exchange-route-carousel');
     var $routeProgress = $('.pathway-exchange-route-progress-bar');
-    
+
     if ($routeSlider.length) {
         $routeSlider.on('init reInit afterChange', function (event, slick, currentSlide) {
             var i = (currentSlide ? currentSlide : 0) + 1;
@@ -614,19 +614,19 @@ $(document).ready(function () {
     // ==========================================
     var $prepSlider = $('.pathway-exchange-prep-carousel');
     var $prepProgress = $('.pathway-exchange-prep-progress-bar');
-    
+
     if ($prepSlider.length) {
         $prepSlider.on('init reInit afterChange', function (event, slick, currentSlide) {
             // When not infinite, currentSlide goes from 0 to (slideCount - slidesToShow)
             var slidesVisible = slick.options.slidesToShow;
             var maxIndex = slick.slideCount - slidesVisible;
             if (maxIndex <= 0) maxIndex = 1;
-            
+
             var i = currentSlide || 0;
             var calc = ((i + 1) / (maxIndex + 1)) * 100;
             // Prevent going over 100%
             if (calc > 100) calc = 100;
-            
+
             $prepProgress.css('width', calc + '%');
         });
 
@@ -653,6 +653,39 @@ $(document).ready(function () {
                 }
             ]
         });
+    }
+
+    // ==========================================
+    // 18. Routes & Programme Types Mobile Slider
+    // ==========================================
+    var $routesSlider = $('#routes-slider-row');
+    var $routesImgCol = $('#routes-image-col');
+
+    if ($routesSlider.length) {
+        function initRoutesSlider() {
+            if (window.innerWidth <= 768 && !$routesSlider.hasClass('slick-initialized')) {
+                // Move image out to avoid it becoming a slide and to keep it static
+                $routesImgCol.insertAfter($routesSlider);
+                $routesImgCol.addClass('mobile-static-img');
+
+                $routesSlider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                    infinite: false
+                });
+            } else if (window.innerWidth > 768 && $routesSlider.hasClass('slick-initialized')) {
+                $routesSlider.slick('unslick');
+
+                // Move image back to its original position
+                $routesImgCol.removeClass('mobile-static-img');
+                $routesImgCol.insertAfter($routesSlider.children('.col-lg-4').first());
+            }
+        }
+
+        initRoutesSlider();
+        $(window).on('resize', initRoutesSlider);
     }
 
 });

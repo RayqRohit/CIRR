@@ -10,6 +10,7 @@
     <!-- Slick Slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body>
@@ -182,7 +183,6 @@
         </div>
     </section>
 
-
     <!-- International Students Section -->
     <section class="student-mobility-students-section pb-5">
         <div class="container">
@@ -320,7 +320,6 @@
         </div>
     </section>
 
-
     <!-- Outbound Track Record Section -->
     <section class="student-mobility-outbound-section py-5">
         <div class="container">
@@ -416,40 +415,40 @@
         </div>
     </section>
 
-
     <!-- Routes & Programme Types Section -->
     <section class="student-mobility-routes-section pt-3 pb-5">
         <div class="container">
             <h3 class="student-mobility-routes-title mb-4">Routes & programme types</h3>
 
-            <div class="row g-4 align-items-stretch">
-                <!-- Left Column -->
-                <div class="col-lg-4 col-md-6 d-flex flex-column gap-4">
-                    <div class="student-mobility-route-card">
-                        <div class="student-mobility-route-icon">
-                            <img src="assets/images/international-programmes/international-programmes-pathway-degree.webp"
-                                alt="Pathway Degree Icon">
+            <div class="position-relative" id="routes-slider-wrapper">
+                <div class="row g-4 align-items-stretch student-mobility-routes-slider" id="routes-slider-row">
+                    <!-- Left Column -->
+                    <div class="col-lg-4 col-md-6 d-flex flex-column gap-4">
+                        <div class="student-mobility-route-card">
+                            <div class="student-mobility-route-icon">
+                                <img src="assets/images/international-programmes/international-programmes-pathway-degree.webp"
+                                    alt="Pathway Degree Icon">
+                            </div>
+                            <h4 class="student-mobility-route-card-title">Pathway Degree</h4>
+                            <p class="student-mobility-route-card-text">2+2, 1+1, 3+1+1, 3+2 models. Start at Parul, finish
+                                abroad. Dual degree potential.</p>
                         </div>
-                        <h4 class="student-mobility-route-card-title">Pathway Degree</h4>
-                        <p class="student-mobility-route-card-text">2+2, 1+1, 3+1+1, 3+2 models. Start at Parul, finish
-                            abroad. Dual degree potential.</p>
-                    </div>
-                    <div class="student-mobility-route-card">
-                        <div class="student-mobility-route-icon">
-                            <img src="assets/images/international-programmes/international-programmes-summer-school.webp"
-                                alt="Summer Schools Icon">
+                        <div class="student-mobility-route-card">
+                            <div class="student-mobility-route-icon">
+                                <img src="assets/images/international-programmes/international-programmes-summer-school.webp"
+                                    alt="Summer Schools Icon">
+                            </div>
+                            <h4 class="student-mobility-route-card-title">Summer Schools</h4>
+                            <p class="student-mobility-route-card-text">2-8 week intensive programs abroad - language,
+                                research methodology, focused topics.</p>
                         </div>
-                        <h4 class="student-mobility-route-card-title">Summer Schools</h4>
-                        <p class="student-mobility-route-card-text">2-8 week intensive programs abroad - language,
-                            research methodology, focused topics.</p>
                     </div>
-                </div>
 
-                <!-- Middle Column (Image) -->
-                <div class="col-lg-4 col-md-12 d-flex">
-                    <img src="assets/images/international-programmes/international-programmes-student-1.webp"
-                        alt="International Programmes" class="student-mobility-routes-img">
-                </div>
+                    <!-- Middle Column (Image) -->
+                    <div class="col-lg-4 col-md-12 d-flex" id="routes-image-col">
+                        <img src="assets/images/international-programmes/international-programmes-student-1.webp"
+                            alt="International Programmes" class="student-mobility-routes-img">
+                    </div>
 
                 <!-- Right Column -->
                 <div class="col-lg-4 col-md-6 d-flex flex-column gap-4">
@@ -751,7 +750,7 @@
             <div class="row g-5 mb-5">
                 <div class="col-lg-7 d-flex flex-column py-1">
                     <div>
-                        <span class="badge research-mobility-badge mb-3 d-inline-block">CABCIN - Co-funded by the
+                        <span class="badge research-mobility-badge mb-3 d-inline-block">CABCIN • Co-funded by the
                             European Union</span>
                         <h3 class="research-mobility-project-title research-mobility-text-gradient mb-3">Establishment
                             of Capacity Building Centers</h3>
@@ -764,6 +763,11 @@
                         <p class="research-mobility-grant fw-bold mb-4"><span
                                 class="research-mobility-text-gradient">Grant: €947,741.66</span></p>
                     </div>
+
+                    <!-- Mobile Image -->
+                    <img src="assets/images/mobility-international-projects/mobility-international-projects-european-union-flag.webp"
+                        alt="EU Flag" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover d-block d-lg-none mb-4"
+                        style="height: 250px;">
 
                     <div class="row g-4 research-mobility-stats-grid">
                         <div class="col-6">
@@ -784,7 +788,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5 d-none d-lg-block">
                     <img src="assets/images/mobility-international-projects/mobility-international-projects-european-union-flag.webp"
                         alt="EU Flag" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
                         style="height: 500px;">

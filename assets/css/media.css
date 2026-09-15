@@ -1,0 +1,569 @@
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Student Mobility Section */
+    .student-mobility-section {
+        background-image: url('../images/student-banner/cirr-background-phone.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .student-mobility-content {
+        padding-right: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-mobility-title {
+        font-size: 46px;
+        line-height: 1.1;
+    }
+
+    .student-mobility-desc {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .student-mobility-image-wrapper {
+        margin-top: 40px;
+    }
+
+    /* Student Mobility Stats Section Mobile */
+    .student-mobility-stats-section {
+        padding: 40px 20px;
+        border-top: 5px solid #FFC900;
+        border-bottom: 5px solid #FFC900;
+    }
+
+    .student-mobility-stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .student-mobility-stat-dot {
+        display: none !important;
+    }
+
+    .student-mobility-stat-item {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .student-mobility-stat-item:nth-child(1) {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .student-mobility-stat-item:nth-child(1)::before {
+        content: '';
+        background: url('../images/Student Mobility Stats/left-wing.svg') no-repeat center/contain;
+        width: 35px;
+        height: 70px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .student-mobility-stat-item:nth-child(1)::after {
+        content: '';
+        background: url('../images/Student Mobility Stats/right-wing.svg') no-repeat center/contain;
+        width: 35px;
+        height: 70px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
+        color: #ffffff;
+        font-size: 56px;
+    }
+
+    /* Pill shapes for the other items */
+    .student-mobility-stat-item:not(:nth-child(1)) {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 12px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
+        font-size: 24px;
+        color: #FFC900;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
+        font-size: 15px;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text br {
+        display: none;
+        /* Keep text on one line in pills */
+    }
+
+    /* Inbound Student Mobility Section Mobile */
+    .student-mobility-inbound-section {
+        padding: 40px 0;
+    }
+
+    .student-mobility-inbound-title {
+        font-size: 20px;
+    }
+
+    .student-mobility-inbound-subtitle {
+        font-size: 42px;
+    }
+
+    .student-mobility-inbound-desc {
+        font-size: 16px;
+    }
+
+    .student-mobility-inbound-banner {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    .student-mobility-inbound-banner-title {
+        font-size: 28px;
+    }
+
+    .student-mobility-inbound-banner-text {
+        font-size: 15px;
+    }
+
+    .student-mobility-inbound-btn {
+        display: block;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .student-mobility-card-img {
+        height: 290px;
+    }
+
+    .student-mobility-card-title {
+        font-size: 22px;
+    }
+
+    .student-mobility-card-text {
+        font-size: 15px;
+    }
+
+    .student-mobility-inbound-banner::after {
+        top: 15%;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Equal height cards fix for slick slider */
+    .student-mobility-inbound-slider .slick-track {
+        display: flex !important;
+    }
+
+    .student-mobility-inbound-slider .slick-slide {
+        display: flex !important;
+        height: inherit !important;
+    }
+
+    .student-mobility-slide {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Students Profile Section Mobile */
+    .student-mobility-students-section {
+        padding: 40px 0;
+    }
+
+    .student-mobility-students-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .student-mobility-profile-img {
+        height: 280px;
+    }
+
+    .student-mobility-profile-name {
+        font-size: 18px;
+    }
+
+    .student-mobility-profile-dept {
+        font-size: 14px;
+    }
+
+    /* Outbound Student Mobility Section Mobile */
+    .student-mobility-outbound-section {
+        padding: 40px 0;
+    }
+
+    .student-mobility-outbound-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .student-mobility-text-gradient {
+        font-size: 36px;
+    }
+
+    .student-mobility-value-subtitle {
+        font-size: 20px;
+    }
+
+    .student-mobility-program-img {
+        height: 290px;
+    }
+
+    .student-mobility-program-title {
+        font-size: 18px;
+    }
+
+    .student-mobility-program-desc {
+        font-size: 14px;
+    }
+
+    /* Equal height cards fix for slick slider (Outbound Section) */
+    .student-mobility-outbound-slider .slick-track {
+        display: flex !important;
+    }
+
+    .student-mobility-outbound-slider .slick-slide {
+        display: flex !important;
+        height: inherit !important;
+    }
+
+    .student-mobility-outbound-slide {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Routes Section Mobile */
+    .student-mobility-routes-section {
+        padding: 40px 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Abroad Section Mobile */
+    .student-mobility-abroad-section {
+        padding: 10px 0 40px 0 !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Value Section Mobile */
+    .student-mobility-value-section {
+        padding: 40px 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Global CTA Section Mobile */
+    .student-mobility-global-cta-section {
+        padding: 40px 0 0 0;
+    }
+
+    .student-mobility-global-cta-section .student-mobility-value-title {
+        background: var(--New, linear-gradient(90deg, #5641E0 0%, #B53C72 100%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 45px;
+    }
+
+    .student-mobility-global-cta-section .student-mobility-btn-gradient {
+        background: var(--New, linear-gradient(90deg, #5641E0 0%, #B53C72 100%));
+        font-size: 16px;
+        padding: 12px 24px !important;
+    }
+
+    .student-mobility-global-cta-desc {
+        font-size: 16px;
+    }
+
+    .student-mobility-global-cta-img-wrapper {
+        width: calc(100% + 30px);
+        margin-top: 20px;
+    }
+
+    .student-mobility-global-cta-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Research Mobility Projects Section Mobile */
+    .research-mobility-projects-section {
+        padding: 40px 0 !important;
+        margin: 40px 0 !important;
+    }
+
+    .research-mobility-title {
+        font-size: 32px;
+    }
+
+    .research-mobility-project-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .research-mobility-badge {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .research-mobility-stats-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px !important;
+    }
+
+    .research-mobility-stats-grid .col-6 {
+        width: 100% !important;
+    }
+
+    /* Reorder items to match mockup */
+    .research-mobility-stats-grid .col-6:nth-child(1) {
+        order: 1;
+    }
+
+    .research-mobility-stats-grid .col-6:nth-child(2) {
+        order: 4;
+    }
+
+    .research-mobility-stats-grid .col-6:nth-child(3) {
+        order: 2;
+    }
+
+    .research-mobility-stats-grid .col-6:nth-child(4) {
+        order: 3;
+    }
+
+    .research-mobility-stat-title {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .research-mobility-stat-value {
+        font-size: 16px;
+    }
+
+    .student-mobility-routes-title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 3rem !important;
+    }
+
+    .student-mobility-route-card {
+        margin: 0 !important;
+        padding: 24px 20px;
+    }
+
+    .student-mobility-route-card-title {
+        font-size: 24px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+
+    .student-mobility-routes-img {
+        min-height: 250px;
+        height: 280px;
+    }
+
+    #routes-slider-wrapper {
+        position: relative;
+    }
+
+    #routes-slider-row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+    }
+
+    #routes-slider-row .slick-list {
+        margin: 0 -10px !important;
+        padding: 0 !important;
+    }
+
+    #routes-slider-row .slick-track {
+        display: flex !important;
+    }
+
+    #routes-slider-row .col-lg-4 {
+        margin: 0 10px !important;
+        gap: 310px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        height: auto !important;
+    }
+
+
+    .mobile-static-img {
+        position: absolute;
+        top: 48%;
+        left: 0;
+        width: 100%;
+        padding: 0 !important;
+        transform: translateY(-50%);
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    /* Routes Slider Dots */
+    .student-mobility-routes-slider {
+        margin-bottom: 20px;
+    }
+
+    .student-mobility-routes-slider .slick-dots {
+        display: flex !important;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+        gap: 8px;
+    }
+
+    .student-mobility-routes-slider .slick-dots li {
+        margin: 0;
+    }
+
+    .student-mobility-routes-slider .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: #cbd5e1;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .student-mobility-routes-slider .slick-dots li.slick-active button {
+        background: #ffc107;
+        width: 24px;
+    }
+
+    /* UK Partnership Section Mobile */
+    .research-mobility-partnership-title {
+        font-size: 36px;
+    }
+
+    .research-mobility-partnership-images {
+        height: 350px !important;
+        margin-top: 20px;
+    }
+
+    .research-mobility-partnership-img-1 {
+        width: 49% !important;
+        height: 65% !important;
+        top: auto !important;
+        bottom: 22% !important;
+        left: auto !important;
+        right: 0 !important;
+        z-index: 2;
+    }
+
+    .research-mobility-partnership-img-2 {
+        width: 49% !important;
+        height: 65% !important;
+        top: 0 !important;
+        bottom: auto !important;
+        left: 0 !important;
+        right: auto !important;
+        z-index: 1;
+    }
+
+    .research-mobility-partnership-section {
+        padding-block: 0rem !important;
+    }
+
+    .research-mobility-partnership-section .container {
+        padding-bottom: 0rem !important;
+    }
+
+    /* Springer Nature Section Mobile */
+    .research-mobility-springer-section .row {
+        display: flex;
+        flex-direction: column;
+        gap: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .research-mobility-springer-section .col-lg-8 {
+        order: 2;
+        padding: 0 !important;
+    }
+    
+    .research-mobility-springer-section .col-lg-4 {
+        order: 1;
+        margin-bottom: 0;
+        padding: 0 !important;
+    }
+
+    .research-mobility-springer-section .research-mobility-springer-image-wrapper {
+        min-height: 325px;
+        height: 250px;
+        border-top-left-radius: 1rem !important;
+        border-top-right-radius: 1rem !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .research-mobility-springer-section .research-mobility-springer-card {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 1rem !important;
+        border-bottom-right-radius: 1rem !important;
+        padding: 24px !important;
+    }
+
+    .research-mobility-springer-card-title {
+        font-size: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding-bottom: 16px;
+    }
+}
+
+

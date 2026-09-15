@@ -1,0 +1,203 @@
+================================================================================
+SECTION 1: STUDENT MOBILITY - HERO BANNER
+================================================================================
+php : new_design_blocks/student_mobility_hero_block/student_mobility_hero_block.php
+css : assets/css/new_design_blocks/student-mobility-hero.min.css
+
+================================================================================
+SECTION 2: STUDENT MOBILITY - STATS BAR
+================================================================================
+php : new_design_blocks/student_mobility_stats_block/student_mobility_stats_block.php
+css : assets/css/new_design_blocks/student-mobility-stats.min.css
+
+================================================================================
+SECTION 3: INBOUND STUDENT MOBILITY (BANNER & SLIDER)
+================================================================================
+php : new_design_blocks/inbound_student_mobility_block/inbound_student_mobility_block.php
+css : assets/css/new_design_blocks/inbound-student-mobility.min.css
+
+================================================================================
+SECTION 4: INTERNATIONAL STUDENTS GRID / PROFILES
+================================================================================
+php : new_design_blocks/international_students_showcase_block/international_students_showcase_block.php
+css : assets/css/new_design_blocks/international-students-showcase.min.css
+
+================================================================================
+SECTION 5: OUTBOUND TRACK RECORD (KEY PROGRAMMES)
+================================================================================
+php : new_design_blocks/outbound_track_record_block/outbound_track_record_block.php
+css : assets/css/new_design_blocks/outbound-track-record.min.css
+
+================================================================================
+SECTION 6: ROUTES & PROGRAMME TYPES (GRID WITH MIDDLE IMAGE)
+================================================================================
+php : new_design_blocks/student_mobility_routes_block/student_mobility_routes_block.php
+css : assets/css/new_design_blocks/student-mobility-routes.min.css
+
+================================================================================
+SECTION 7: STUDENTS WHO WENT ABROAD (PROFILES SLIDER)
+================================================================================
+php : new_design_blocks/abroad_students_showcase_block/abroad_students_showcase_block.php
+css : assets/css/new_design_blocks/abroad-students-showcase.min.css
+
+================================================================================
+SECTION 8: VALUE OF MOBILITY (WHY STUDENTS MOVE)
+================================================================================
+php : new_design_blocks/mobility_value_outcomes_block/mobility_value_outcomes_block.php
+css : assets/css/new_design_blocks/mobility-value-outcomes.min.css
+
+================================================================================
+SECTION 9: GLOBAL CALL TO ACTION BANNER
+================================================================================
+php : new_design_blocks/mobility_global_cta_block/mobility_global_cta_block.php
+css : assets/css/new_design_blocks/mobility-global-cta.min.css
+
+================================================================================
+SECTION 10: ACTIVE INTERNATIONAL RESEARCH PROJECTS (CABCIN & PARTNERS)
+================================================================================
+php : new_design_blocks/research_mobility_projects_block/research_mobility_projects_block.php
+css : assets/css/new_design_blocks/research-mobility-projects.min.css
+
+================================================================================
+SECTION 11: OTHER FUNDED RESEARCH PROJECTS
+================================================================================
+php : new_design_blocks/research_mobility_other_projects_block/research_mobility_other_projects_block.php
+css : assets/css/new_design_blocks/research-mobility-other-projects.min.css
+
+================================================================================
+SECTION 12: UK PARTNERSHIP (ROYAL ACADEMY OF ENGINEERING)
+================================================================================
+php : new_design_blocks/research_mobility_partnership_block/research_mobility_partnership_block.php
+css : assets/css/new_design_blocks/research-mobility-partnership.min.css
+
+================================================================================
+SECTION 13: SPRINGER NATURE PARTNERSHIP
+================================================================================
+php : new_design_blocks/springer_nature_partnership_block/springer_nature_partnership_block.php
+css : assets/css/new_design_blocks/springer-nature-partnership.min.css
+
+================================================================================
+SECTION 14: FACULTY & STAFF MOBILITY (THREE PROGRAMMES)
+================================================================================
+php : new_design_blocks/staff_mobility_programs_block/staff_mobility_programs_block.php
+css : assets/css/new_design_blocks/staff-mobility-programs.min.css
+
+================================================================================
+SECTION 15: OUTBOUND FACULTY MOBILITY & DIRECTORY
+================================================================================
+php : new_design_blocks/staff_mobility_outbound_block/staff_mobility_outbound_block.php
+css : assets/css/new_design_blocks/staff-mobility-outbound.min.css
+
+================================================================================
+SECTION 16: CIRR PURPOSE (VISION & MISSION)
+================================================================================
+php : new_design_blocks/cirr_vision_mission_block/cirr_vision_mission_block.php
+css : assets/css/new_design_blocks/cirr-vision-mission.min.css
+
+================================================================================
+SECTION 17: DIRECTOR'S MESSAGE
+================================================================================
+php : new_design_blocks/cirr_directors_message_block/cirr_directors_message_block.php
+css : assets/css/new_design_blocks/cirr-directors-message.min.css
+
+================================================================================
+SECTION 18: GLOBAL MOUS & PARTNERSHIPS OVERVIEW
+================================================================================
+php : new_design_blocks/cirr_global_mous_block/cirr_global_mous_block.php
+css : assets/css/new_design_blocks/cirr-global-mous.min.css
+
+================================================================================
+SECTION 19: CIRR EVENTS & NEWS LISTING
+================================================================================
+php : new_design_blocks/cirr_events_news_block/cirr_events_news_block.php
+css : assets/css/new_design_blocks/cirr-events-news.min.css
+
+================================================================================
+SECTION 20: STUDENT VOICES (TESTIMONIALS SLIDER)
+================================================================================
+php : new_design_blocks/cirr_student_voices_block/cirr_student_voices_block.php
+css : assets/css/new_design_blocks/cirr-student-voices.min.css
+
+================================================================================
+SECTION 21: CIRR LEADERSHIP & TEAM DIRECTORY
+================================================================================
+php : new_design_blocks/cirr_team_directory_block/cirr_team_directory_block.php
+css : assets/css/new_design_blocks/cirr-team-directory.min.css
+
+================================================================================
+SECTION 22: STUDENT SUCCESS STORIES (VIDEO SLIDER)
+================================================================================
+php : new_design_blocks/student_success_videos_block/student_success_videos_block.php
+css : assets/css/new_design_blocks/student-success-videos.min.css
+
+================================================================================
+SECTION 23: PATHWAY & EXCHANGE - HERO BANNER
+================================================================================
+php : new_design_blocks/pathway_exchange_hero_block/pathway_exchange_hero_block.php
+css : assets/css/new_design_blocks/pathway-exchange-hero.min.css
+
+================================================================================
+SECTION 24: GLOBAL JOURNEY DESTINATIONS MAP
+================================================================================
+php : new_design_blocks/pathway_global_journey_block/pathway_global_journey_block.php
+css : assets/css/new_design_blocks/pathway-global-journey.min.css
+
+================================================================================
+SECTION 25: PATHWAY GATEWAY FEATURES
+================================================================================
+php : new_design_blocks/pathway_gateway_features_block/pathway_gateway_features_block.php
+css : assets/css/new_design_blocks/pathway-gateway-features.min.css
+
+================================================================================
+SECTION 26: PATHWAY TRACK RECORD (NUMERICAL METRICS)
+================================================================================
+php : new_design_blocks/pathway_track_record_block/pathway_track_record_block.php
+css : assets/css/new_design_blocks/pathway-track-record.min.css
+
+================================================================================
+SECTION 27: ADVANTAGE OF STARTING AT HOME (PATHWAY VALUE)
+================================================================================
+php : new_design_blocks/pathway_home_advantage_block/pathway_home_advantage_block.php
+css : assets/css/new_design_blocks/pathway-home-advantage.min.css
+
+================================================================================
+SECTION 28: ARTICULATION MODELS (2+2, 1+1, 3+1+1, 3+2)
+================================================================================
+php : new_design_blocks/pathway_articulation_models_block/pathway_articulation_models_block.php
+css : assets/css/new_design_blocks/pathway-articulation-models.min.css
+
+================================================================================
+SECTION 29: MOU PARTNER UNIVERSITIES 3D SLIDER
+================================================================================
+php : new_design_blocks/pathway_partner_universities_block/pathway_partner_universities_block.php
+css : assets/css/new_design_blocks/pathway-partner-universities.min.css
+
+================================================================================
+SECTION 30: PATHWAY SUCCESS STORIES & STATS
+================================================================================
+php : new_design_blocks/pathway_success_stories_block/pathway_success_stories_block.php
+css : assets/css/new_design_blocks/pathway-success-stories.min.css
+
+================================================================================
+SECTION 31: INTERNATIONAL PATHWAY PROGRAMMES TABLE & DIRECTORY
+================================================================================
+php : new_design_blocks/pathway_programmes_table_block/pathway_programmes_table_block.php
+css : assets/css/new_design_blocks/pathway-programmes-table.min.css
+
+================================================================================
+SECTION 32: FIND YOUR ROUTE ABROAD (CAROUSEL & FILTER CARDS)
+================================================================================
+php : new_design_blocks/pathway_route_finder_block/pathway_route_finder_block.php
+css : assets/css/new_design_blocks/pathway-route-finder.min.css
+
+================================================================================
+SECTION 33: LANGUAGE & TEST PREPARATION (IELTS / FOREIGN LANGUAGES)
+================================================================================
+php : new_design_blocks/pathway_language_prep_block/pathway_language_prep_block.php
+css : assets/css/new_design_blocks/pathway-language-prep.min.css
+
+================================================================================
+SECTION 34: GLOBAL DEGREE BOTTOM CTA
+================================================================================
+php : new_design_blocks/pathway_global_degree_cta_block/pathway_global_degree_cta_block.php
+css : assets/css/new_design_blocks/pathway-global-degree-cta.min.css
