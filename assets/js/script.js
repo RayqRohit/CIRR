@@ -22,7 +22,7 @@ $(document).ready(function () {
             var studentSlideCount = $slider.children(slideClass).length;
             if (studentSlideCount <= 8 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass(sliderClass);
-                $slider.find(slideClass).addClass('col-lg-3 col-md-6 col-sm-6').removeClass('px-2 mb-4 ' + slideClass.substring(1));
+                $slider.find(slideClass).addClass('col-lg-4 col-md-6 col-sm-6').removeClass('px-2 mb-4 ' + slideClass.substring(1));
                 $slider.siblings('.student-mobility-slider-controls').removeClass('d-flex').addClass('d-none');
                 return;
             }
@@ -68,7 +68,7 @@ $(document).ready(function () {
         // Special check for Staff Mobility Slider: Display as grid if 3 or fewer cards
         if (sliderType === 'staff-mobility') {
             var staffSlideCount = $slider.children('.staff-mobility-slide').length;
-            if (staffSlideCount <= 3) {
+            if (staffSlideCount <= 3 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass('staff-mobility-slider mx-n2');
                 $slider.find('.staff-mobility-slide').addClass('col-lg-4 col-md-6').removeClass('px-2 mb-4 staff-mobility-slide');
                 $slider.siblings('.staff-mobility-controls').removeClass('d-flex').addClass('d-none');
@@ -79,7 +79,7 @@ $(document).ready(function () {
         // Special check for Gateway Slider: Display as grid if 3 or fewer cards
         if (sliderType === 'gateway') {
             var gatewaySlideCount = $slider.children().length;
-            if (gatewaySlideCount <= 3) {
+            if (gatewaySlideCount <= 3 && window.innerWidth >= 992) {
                 $slider.addClass('row g-4').removeClass('pathway-exchange-gateway-slider mx-n3');
                 $slider.children().addClass('col-lg-4 col-md-6').removeClass('px-3 pb-2');
                 $slider.siblings('.pathway-exchange-gateway-controls').removeClass('d-flex').addClass('d-none');
@@ -90,7 +90,7 @@ $(document).ready(function () {
         // Special check for Outbound Faculty / Team Grid Sliders: Display as grid if 8 or fewer cards
         if (sliderType === 'outbound-faculty') {
             var teamSlideCount = $slider.children().length;
-            if (teamSlideCount <= 8) {
+            if (teamSlideCount <= 8 && window.innerWidth >= 992) {
                 if ($slider.hasClass('staff-mobility-faculty-slider')) {
                     $slider.addClass('row g-4').removeClass('staff-mobility-faculty-slider');
                     $slider.siblings('.staff-mobility-faculty-controls').removeClass('d-flex').addClass('d-none');
@@ -98,7 +98,7 @@ $(document).ready(function () {
                     $slider.addClass('row g-4').removeClass('international-relations-team-slider');
                     $slider.siblings('.international-relations-team-controls').removeClass('d-flex').addClass('d-none');
                 }
-                $slider.children().addClass('col-lg-3 col-md-6').removeClass('px-2 mb-4');
+                $slider.children().addClass('col-xl-3 col-lg-4 col-md-6').removeClass('px-2 mb-4');
                 return;
             }
         }
@@ -164,6 +164,7 @@ $(document).ready(function () {
             infinite: false,
             arrows: true,
             responsive: [
+                { breakpoint: 1200, settings: { slidesToShow: 2 } },
                 { breakpoint: 992, settings: { slidesToShow: 2 } },
                 { breakpoint: 768, settings: { slidesToShow: 1 } }
             ]
@@ -181,8 +182,8 @@ $(document).ready(function () {
         $('.student-mobility-students-next'),
         {
             rows: 2,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             infinite: false,
             arrows: true,
             responsive: [
@@ -212,6 +213,7 @@ $(document).ready(function () {
             infinite: false,
             arrows: true,
             responsive: [
+                { breakpoint: 1200, settings: { slidesToShow: 2 } },
                 { breakpoint: 992, settings: { slidesToShow: 2 } },
                 { breakpoint: 768, settings: { slidesToShow: 1 } }
             ]
@@ -229,8 +231,8 @@ $(document).ready(function () {
         $('.student-mobility-abroad-next'),
         {
             rows: 2,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             infinite: false,
             arrows: true,
             responsive: [
@@ -348,6 +350,7 @@ $(document).ready(function () {
             infinite: false,
             arrows: true,
             responsive: [
+                { breakpoint: 1200, settings: { slidesToShow: 2 } },
                 { breakpoint: 992, settings: { slidesToShow: 2 } },
                 { breakpoint: 768, settings: { slidesToShow: 1 } }
             ]
@@ -365,8 +368,8 @@ $(document).ready(function () {
         $('.staff-mobility-faculty-next'),
         {
             rows: 2,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             infinite: false,
             arrows: true,
             responsive: [
@@ -410,8 +413,8 @@ $(document).ready(function () {
         $('.international-relations-team-next'),
         {
             rows: 2,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             infinite: false,
             arrows: true,
             dots: false,
@@ -663,7 +666,7 @@ $(document).ready(function () {
 
     if ($routesSlider.length) {
         function initRoutesSlider() {
-            if (window.innerWidth <= 768 && !$routesSlider.hasClass('slick-initialized')) {
+            if (window.innerWidth <= 991 && !$routesSlider.hasClass('slick-initialized')) {
                 // Move image out to avoid it becoming a slide and to keep it static
                 $routesImgCol.insertAfter($routesSlider);
                 $routesImgCol.addClass('mobile-static-img');
@@ -675,7 +678,7 @@ $(document).ready(function () {
                     arrows: false,
                     infinite: false
                 });
-            } else if (window.innerWidth > 768 && $routesSlider.hasClass('slick-initialized')) {
+            } else if (window.innerWidth > 991 && $routesSlider.hasClass('slick-initialized')) {
                 $routesSlider.slick('unslick');
 
                 // Move image back to its original position
